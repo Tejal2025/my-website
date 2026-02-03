@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Marry Me? 💍 | For Chetan</title>
     <style>
         * {
@@ -10,54 +10,55 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Arial', sans-serif;
-            -webkit-tap-highlight-color: transparent;
         }
         
         body {
             background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
             overflow-x: hidden;
-            padding: 10px;
+            padding: 20px;
             transition: background 0.8s ease;
             min-height: 100vh;
             color: white;
-            touch-action: manipulation;
         }
         
         .page-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 15px 0;
-            width: 100%;
+            padding: 40px 0;
         }
         
         .container {
-            background-color: rgba(255, 255, 255, 0.98);
-            border-radius: 18px;
-            padding: 25px 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 24px;
+            padding: 50px 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             text-align: center;
             width: 100%;
-            border: 4px solid #e0aaff;
+            border: 6px solid #e0aaff;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 2;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
         }
         
         h1 {
             color: #9d4edd;
-            font-size: clamp(1.8rem, 6vw, 2.6rem);
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
             font-weight: 800;
-            line-height: 1.2;
-            padding: 0 5px;
         }
         
         .ring-emoji {
-            font-size: clamp(2rem, 6vw, 2.8rem);
-            margin: 0 5px;
+            font-size: 3rem;
+            margin: 0 10px;
             animation: ringSpin 8s linear infinite;
             display: inline-block;
         }
@@ -70,18 +71,17 @@
         
         .name-highlight {
             color: #7b2cbf;
-            font-size: clamp(2rem, 6.5vw, 3rem);
+            font-size: 3.2rem;
             font-weight: 900;
-            margin: 12px 0;
+            margin: 20px 0;
             text-transform: capitalize;
             position: relative;
             display: inline-block;
-            padding: 0 10px;
+            padding: 0 15px;
             background: linear-gradient(135deg, #f9c5ff, #e0aaff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            line-height: 1.2;
         }
         
         .name-highlight::before, .name-highlight::after {
@@ -89,138 +89,115 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: clamp(1.3rem, 4vw, 2rem);
+            font-size: 2.2rem;
             opacity: 0.9;
         }
         
         .name-highlight::before {
-            left: -20px;
+            left: -35px;
         }
         
         .name-highlight::after {
-            right: -20px;
+            right: -35px;
         }
         
         .question {
-            font-size: clamp(1.1rem, 4vw, 1.5rem);
+            font-size: 1.8rem;
             color: #555;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
             font-weight: 600;
             line-height: 1.5;
-            background: rgba(240, 230, 255, 0.95);
-            padding: 15px 12px;
-            border-radius: 10px;
-            border-left: 3px solid #9d4edd;
-            border-right: 3px solid #9d4edd;
-            margin-top: 8px;
+            background: rgba(240, 230, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #9d4edd;
+            border-right: 5px solid #9d4edd;
         }
         
         .buttons-section {
-            background: rgba(255, 245, 255, 0.97);
-            border-radius: 14px;
-            padding: 20px 12px;
-            margin: 20px 0;
-            box-shadow: inset 0 0 10px rgba(157, 78, 221, 0.1);
+            background: rgba(255, 245, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px 25px;
+            margin: 30px 0;
+            box-shadow: inset 0 0 15px rgba(157, 78, 221, 0.2);
             position: relative;
-            min-height: 220px;
+            min-height: 200px;
             transition: all 0.3s ease;
-            border: 2px solid #e0aaff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            border: 3px solid #e0aaff;
         }
         
         .buttons-section-title {
             color: #9d4edd;
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            text-align: center;
+            letter-spacing: 1.5px;
         }
         
         .buttons-container {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-top: 5px;
+            gap: 40px;
+            margin-top: 15px;
+            flex-wrap: wrap;
             position: relative;
-            width: 100%;
-            min-height: 160px;
+            min-height: 130px;
+            align-items: center;
         }
         
         .proposal-btn {
-            padding: 16px 25px;
-            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            padding: 18px 45px;
+            font-size: 1.6rem;
             border: none;
-            border-radius: 40px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             font-weight: 700;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 280px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            min-width: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 12px;
             position: relative;
             z-index: 10;
-            letter-spacing: 0.5px;
-            touch-action: manipulation;
-            -webkit-appearance: none;
-            appearance: none;
-            min-height: 55px;
-            margin: 5px 0;
+            letter-spacing: 0.8px;
         }
         
         .yes-btn {
             background: linear-gradient(135deg, #4CAF50, #2E7D32);
             color: white;
             border: 3px solid #1B5E20;
-            order: 1;
         }
         
-        .yes-btn:active, .yes-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 18px rgba(76, 175, 80, 0.25);
+        .yes-btn:hover:not(:disabled) {
+            transform: scale(1.15);
+            box-shadow: 0 15px 25px rgba(76, 175, 80, 0.4);
             background: linear-gradient(135deg, #2E7D32, #1B5E20);
         }
         
-        .yes-btn:disabled {
-            opacity: 0.9;
-            cursor: default;
+        .yes-btn:active:not(:disabled) {
+            transform: scale(1.05);
         }
         
         .no-btn {
             background: linear-gradient(135deg, #f44336, #c62828);
             color: white;
             transition: all 0.3s ease;
+            position: absolute;
             border: 3px solid #b71c1c;
             z-index: 20;
-            order: 2;
-            position: relative !important;
-            left: 0 !important;
-            top: 0 !important;
-            transform: none !important;
         }
         
-        .no-btn:active, .no-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 18px rgba(244, 67, 54, 0.25);
-        }
-        
-        .no-btn.moving {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .no-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 25px rgba(244, 67, 54, 0.4);
         }
         
         .heart, .ring {
             color: #ff4081;
-            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-size: 1.8rem;
             animation: heartbeat 1.5s infinite;
             display: inline-block;
         }
@@ -245,81 +222,72 @@
         }
         
         .message-container {
-            margin-top: 20px;
-            padding: 18px 12px;
-            border-radius: 10px;
+            margin-top: 35px;
+            padding: 25px;
+            border-radius: 15px;
             background: linear-gradient(135deg, rgba(240, 230, 255, 0.95), rgba(255, 240, 245, 0.95));
-            min-height: 70px;
+            min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
             border: 2px solid #9d4edd;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
         }
         
         .message {
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-size: 1.5rem;
             color: #666;
             font-weight: 600;
             transition: all 0.3s ease;
-            text-align: center;
-            line-height: 1.4;
-            padding: 0 5px;
         }
         
         .success {
             color: #4CAF50;
-            font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+            font-size: 2.2rem;
             font-weight: bold;
             animation: celebrate 0.8s infinite alternate;
-            text-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
-            line-height: 1.3;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
         }
         
         @keyframes celebrate {
-            from { transform: scale(1); text-shadow: 0 0 6px rgba(76, 175, 80, 0.2); }
-            to { transform: scale(1.04); text-shadow: 0 0 10px rgba(76, 175, 80, 0.3); }
+            from { transform: scale(1); text-shadow: 0 0 10px rgba(76, 175, 80, 0.3); }
+            to { transform: scale(1.08); text-shadow: 0 0 15px rgba(76, 175, 80, 0.5); }
         }
         
         .counter-container {
-            margin-top: 15px;
-            padding: 10px 12px;
+            margin-top: 25px;
+            padding: 15px;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 8px;
+            border-radius: 12px;
             display: inline-block;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 2px solid #e0aaff;
-            max-width: 90%;
         }
         
         .attempt-counter {
             color: #777;
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            font-size: 1.3rem;
             font-weight: 600;
-            text-align: center;
-            line-height: 1.4;
         }
         
         .counter-number {
             color: #9d4edd;
             font-weight: 800;
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            font-size: 1.5rem;
         }
         
         .footer {
-            margin-top: 25px;
+            margin-top: 40px;
             color: #fff;
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            font-size: 1.3rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(224, 170, 255, 0.2);
-            text-shadow: 0 0 5px rgba(224, 170, 255, 0.3);
-            text-align: center;
-            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 25px;
+            border-top: 2px solid rgba(224, 170, 255, 0.3);
+            text-shadow: 0 0 8px rgba(224, 170, 255, 0.5);
         }
         
         .hearts-background {
@@ -335,9 +303,9 @@
         
         .floating-heart, .floating-ring {
             position: absolute;
-            font-size: clamp(14px, 3.5vw, 20px);
+            font-size: 24px;
             animation: float 10s linear infinite;
-            opacity: 0.6;
+            opacity: 0.7;
         }
         
         .floating-ring {
@@ -350,10 +318,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.7;
+                opacity: 0.8;
             }
             90% {
-                opacity: 0.7;
+                opacity: 0.8;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg);
@@ -367,13 +335,13 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.8;
+                opacity: 0.9;
             }
             50% {
                 transform: rotate(180deg) scale(1.1);
             }
             90% {
-                opacity: 0.7;
+                opacity: 0.8;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg) scale(1);
@@ -383,82 +351,83 @@
         
         /* Scrollable content sections */
         .scroll-content {
-            margin-top: 25px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
         
         .content-card {
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 14px;
-            padding: 20px 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border: 3px solid #e0aaff;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            padding: 30px 25px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border: 4px solid #e0aaff;
             transition: all 0.3s ease;
             text-align: left;
-            width: 100%;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
         
         .content-card h2 {
             color: #7b2cbf;
-            font-size: clamp(1.3rem, 4vw, 1.6rem);
-            margin-bottom: 12px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             border-bottom: 2px solid #e0aaff;
-            padding-bottom: 8px;
-            line-height: 1.3;
+            padding-bottom: 12px;
         }
         
         .content-card p {
             color: #555;
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
-            line-height: 1.5;
-            margin-bottom: 12px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
         }
         
         .content-card ul {
             text-align: left;
-            padding-left: 18px;
+            padding-left: 20px;
             color: #666;
-            font-size: clamp(0.9rem, 2.8vw, 1.05rem);
-            line-height: 1.6;
+            font-size: 1.05rem;
+            line-height: 1.8;
         }
         
         .content-card li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
             position: relative;
-            padding-left: 6px;
+            padding-left: 8px;
         }
         
         .content-card li:before {
             content: "💕";
             position: absolute;
-            left: -18px;
-            font-size: 0.9rem;
+            left: -22px;
+            font-size: 1.1rem;
         }
         
         .proposal-ring {
             text-align: center;
-            margin: 20px auto;
-            max-width: 100%;
-            width: 100%;
+            margin: 40px auto;
+            max-width: 500px;
         }
         
         .ring-display {
-            width: clamp(140px, 45vw, 200px);
-            height: clamp(140px, 45vw, 200px);
-            margin: 0 auto 15px;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 25px;
             background: radial-gradient(circle, #fff 0%, #f9f0ff 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 20px rgba(224, 170, 255, 0.4);
-            border: 5px solid #e0aaff;
+            box-shadow: 0 0 35px rgba(224, 170, 255, 0.6);
+            border: 8px solid #e0aaff;
             animation: ringPulse 4s infinite;
             position: relative;
             overflow: hidden;
@@ -467,23 +436,23 @@
         .ring-display:before {
             content: "";
             position: absolute;
-            width: clamp(160px, 50vw, 230px);
-            height: clamp(160px, 50vw, 230px);
+            width: 250px;
+            height: 250px;
             background: conic-gradient(transparent, #9d4edd, transparent);
             animation: rotate 3s linear infinite;
         }
         
         .ring-display:after {
             content: "💍";
-            font-size: clamp(60px, 18vw, 100px);
+            font-size: 110px;
             position: relative;
             z-index: 2;
             animation: ringFloat 3s ease-in-out infinite;
         }
         
         @keyframes ringPulse {
-            0%, 100% { box-shadow: 0 0 20px rgba(224, 170, 255, 0.4); }
-            50% { box-shadow: 0 0 35px rgba(224, 170, 255, 0.6); }
+            0%, 100% { box-shadow: 0 0 35px rgba(224, 170, 255, 0.6); }
+            50% { box-shadow: 0 0 60px rgba(224, 170, 255, 0.8); }
         }
         
         @keyframes rotate {
@@ -493,249 +462,161 @@
         
         @keyframes ringFloat {
             0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-10px) scale(1.05); }
+            50% { transform: translateY(-15px) scale(1.08); }
         }
         
         .ring-message {
             color: white;
-            font-size: clamp(1rem, 3.5vw, 1.3rem);
-            margin-top: 15px;
-            text-shadow: 0 0 5px rgba(224, 170, 255, 0.4);
-            background: rgba(157, 78, 221, 0.15);
-            padding: 12px 10px;
-            border-radius: 8px;
+            font-size: 1.5rem;
+            margin-top: 25px;
+            text-shadow: 0 0 8px rgba(224, 170, 255, 0.6);
+            background: rgba(157, 78, 221, 0.2);
+            padding: 18px;
+            border-radius: 12px;
             border: 2px solid #e0aaff;
-            line-height: 1.4;
         }
         
         .scroll-indicator {
             text-align: center;
-            margin-top: 15px;
+            margin-top: 30px;
             color: #e0aaff;
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            font-size: 1.2rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 6px;
+            gap: 12px;
             animation: bounce 2s infinite;
-            text-shadow: 0 0 5px rgba(224, 170, 255, 0.4);
+            text-shadow: 0 0 8px rgba(224, 170, 255, 0.6);
         }
         
         .scroll-indicator i {
-            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            font-size: 2rem;
         }
         
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-6px);}
-            60% {transform: translateY(-3px);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
         }
         
         .confetti {
             position: fixed;
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             background-color: #9d4edd;
-            top: -10px;
+            top: -20px;
             z-index: 1000;
             opacity: 0;
             border-radius: 50%;
         }
         
-        /* Button instructions */
-        .instructions {
-            color: #9d4edd;
-            font-size: clamp(0.85rem, 2.8vw, 1rem);
-            margin-top: 10px;
-            font-style: italic;
-            font-weight: 600;
-            text-shadow: 0 0 3px rgba(224, 170, 255, 0.3);
-            text-align: center;
-            padding: 0 10px;
-        }
-        
-        /* Tablet and larger mobile screens */
-        @media (min-width: 481px) {
+        @media (max-width: 768px) {
             .container {
-                padding: 30px 25px;
-                border-radius: 20px;
+                padding: 35px 20px;
+                border-width: 5px;
             }
             
-            .buttons-container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 20px;
-                min-height: 140px;
+            h1 {
+                font-size: 2.2rem;
             }
             
-            .proposal-btn {
-                min-width: 180px;
-                width: auto;
-                padding: 18px 35px;
+            .ring-emoji {
+                font-size: 2.5rem;
             }
             
-            .no-btn {
-                position: absolute !important;
-                width: auto;
+            .name-highlight {
+                font-size: 2.5rem;
             }
             
-            .scroll-content {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            
-            .content-card:last-child {
-                grid-column: span 2;
-            }
-            
-            body {
-                padding: 15px;
-            }
-        }
-        
-        /* Desktop and larger tablets */
-        @media (min-width: 769px) {
-            .container {
-                padding: 40px 35px;
-                border-radius: 24px;
-            }
-            
-            .buttons-container {
-                flex-direction: row;
-                gap: 40px;
-                min-height: 150px;
-            }
-            
-            .proposal-btn {
-                min-width: 200px;
-                width: auto;
-                padding: 20px 45px;
-                font-size: 1.4rem;
-            }
-            
-            .no-btn {
-                position: absolute !important;
-                width: auto;
-            }
-            
-            .scroll-content {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
-            }
-            
-            .content-card:last-child {
-                grid-column: span 1;
-            }
-            
-            body {
-                padding: 20px;
-            }
-        }
-        
-        /* Very small mobile screens */
-        @media (max-width: 360px) {
-            .container {
-                padding: 20px 12px;
-            }
-            
-            .proposal-btn {
-                width: 95%;
-                padding: 14px 20px;
-                font-size: 1.1rem;
-                min-height: 50px;
-            }
-            
-            .ring-display {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .ring-display:after {
-                font-size: 50px;
-            }
-            
-            .buttons-section {
-                min-height: 200px;
-            }
-        }
-        
-        /* Landscape orientation */
-        @media (max-height: 600px) and (orientation: landscape) {
-            .container {
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .buttons-section {
-                padding: 15px 10px;
-                min-height: 140px;
-            }
-            
-            .buttons-container {
-                min-height: 110px;
-                flex-direction: row;
-                gap: 15px;
-            }
-            
-            .proposal-btn {
-                padding: 10px 20px;
-                font-size: 1.1rem;
-                min-height: 45px;
-                width: auto;
-                min-width: 140px;
+            .name-highlight::before, .name-highlight::after {
+                font-size: 1.8rem;
             }
             
             .question {
-                margin-bottom: 15px;
-                padding: 12px;
+                font-size: 1.5rem;
+                padding: 18px;
+            }
+            
+            .proposal-btn {
+                padding: 16px 35px;
+                font-size: 1.4rem;
+                min-width: 160px;
+            }
+            
+            .buttons-container {
+                gap: 30px;
+                min-height: 180px;
+            }
+            
+            .buttons-section {
+                padding: 25px 20px;
+                min-height: 180px;
+            }
+            
+            .message {
+                font-size: 1.3rem;
+            }
+            
+            .success {
+                font-size: 1.8rem;
             }
             
             .ring-display {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 10px;
+                width: 180px;
+                height: 180px;
             }
             
             .ring-display:after {
-                font-size: 40px;
+                font-size: 90px;
             }
         }
         
-        /* Fix for iOS Safari */
-        @supports (-webkit-touch-callout: none) {
-            .proposal-btn {
-                padding: 18px 25px;
-            }
-        }
-        
-        /* Prevent text size adjustment */
-        html {
-            -webkit-text-size-adjust: 100%;
-            -ms-text-size-adjust: 100%;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        /* Focus styles for accessibility */
-        .proposal-btn:focus {
-            outline: 2px solid #9d4edd;
-            outline-offset: 2px;
-        }
-        
-        /* Fix for mobile hover states */
-        @media (hover: none) {
-            .yes-btn:hover, .no-btn:hover {
-                transform: none;
+        @media (max-width: 480px) {
+            .buttons-container {
+                flex-direction: column;
+                gap: 25px;
+                min-height: 220px;
             }
             
-            .yes-btn:active, .no-btn:active {
-                transform: scale(0.98);
+            .no-btn {
+                position: relative;
+                margin-top: 15px;
             }
+            
+            .proposal-btn {
+                width: 90%;
+                max-width: 280px;
+                padding: 15px 30px;
+                font-size: 1.3rem;
+            }
+            
+            .ring-display {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .ring-display:after {
+                font-size: 70px;
+            }
+            
+            .ring-message {
+                font-size: 1.3rem;
+                padding: 15px;
+            }
+            
+            .content-card {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* Button instructions */
+        .instructions {
+            color: #9d4edd;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            font-style: italic;
+            font-weight: 600;
+            text-shadow: 0 0 4px rgba(224, 170, 255, 0.5);
         }
     </style>
 </head>
@@ -823,7 +704,7 @@
         </div>
         
         <div class="footer">
-            Made with all my love <span class="heart" style="font-size: 1.2rem;">❤️</span> For Chetan, my forever person
+            Made with all my love <span class="heart" style="font-size: 1.5rem;">❤️</span> For Chetan, my forever person
         </div>
         
         <div class="hearts-background" id="heartsBackground"></div>
@@ -840,13 +721,12 @@
             const body = document.querySelector('body');
             
             let noButtonAttempts = 0;
+            let noButtonPosition = { x: 0, y: 0 };
             let isMoving = false;
-            let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            let isYesClicked = false;
             
             // Create floating hearts and rings in background
             function createFloatingElements() {
-                const elementCount = isMobile ? 12 : 18;
+                const elementCount = 20;
                 
                 for (let i = 0; i < elementCount; i++) {
                     const element = document.createElement('div');
@@ -855,9 +735,9 @@
                     
                     const leftPos = Math.random() * 100;
                     const animationDuration = 6 + Math.random() * 10;
-                    const fontSize = isMobile ? 12 + Math.random() * 16 : 15 + Math.random() * 20;
+                    const fontSize = 18 + Math.random() * 25;
                     const delay = Math.random() * 8;
-                    const colorOpacity = 0.15 + Math.random() * 0.25;
+                    const colorOpacity = 0.2 + Math.random() * 0.3;
                     
                     element.style.left = `${leftPos}%`;
                     element.style.fontSize = `${fontSize}px`;
@@ -878,40 +758,67 @@
             
             // Function to move the "No" button to a random position
             function moveNoButton(e) {
-                if (isYesClicked || isMoving) return; // Don't move if "Yes" was already clicked or already moving
+                if (yesBtn.disabled || isMoving) return; // Don't move if "Yes" was already clicked or already moving
                 
                 isMoving = true;
-                noBtn.classList.add('moving');
+                noBtn.style.transition = 'all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                 
                 const buttonWidth = noBtn.offsetWidth;
                 const buttonHeight = noBtn.offsetHeight;
                 const containerWidth = buttonsContainer.offsetWidth;
                 const containerHeight = buttonsContainer.offsetHeight;
                 
-                // Calculate maximum positions
-                const maxX = containerWidth - buttonWidth - 20;
-                const maxY = containerHeight - buttonHeight - 20;
+                // Calculate maximum positions (considering button size)
+                const maxX = containerWidth - buttonWidth - 15;
+                const maxY = containerHeight - buttonHeight - 15;
                 
-                // For mobile, use simpler positioning
+                // Generate random position within container bounds
                 let randomX, randomY;
+                let attempts = 0;
+                const maxAttempts = 15;
                 
-                if (window.innerWidth <= 480) {
-                    // On mobile, buttons are stacked, so just move within container
-                    randomX = Math.max(10, Math.min(Math.floor(Math.random() * maxX), maxX));
-                    randomY = Math.max(10, Math.min(Math.floor(Math.random() * maxY), maxY));
-                } else {
-                    // On larger screens, use random positioning
+                do {
                     randomX = Math.floor(Math.random() * maxX);
                     randomY = Math.floor(Math.random() * maxY);
+                    attempts++;
                     
-                    // Ensure position is within bounds
-                    randomX = Math.max(10, Math.min(randomX, maxX));
-                    randomY = Math.max(10, Math.min(randomY, maxY));
-                }
+                    // Make sure new position is not too close to current position
+                    const distance = Math.sqrt(
+                        Math.pow(randomX - noButtonPosition.x, 2) + 
+                        Math.pow(randomY - noButtonPosition.y, 2)
+                    );
+                    
+                    // Also make sure it's not too close to the Yes button
+                    const yesBtnRect = yesBtn.getBoundingClientRect();
+                    const containerRect = buttonsContainer.getBoundingClientRect();
+                    
+                    // Convert yes button position relative to container
+                    const yesBtnX = yesBtnRect.left - containerRect.left;
+                    const yesBtnY = yesBtnRect.top - containerRect.top;
+                    
+                    const distanceToYes = Math.sqrt(
+                        Math.pow(randomX - yesBtnX, 2) + 
+                        Math.pow(randomY - yesBtnY, 2)
+                    );
+                    
+                    // Break if we found a good position
+                    if (distance > 70 && distanceToYes > 90 && attempts >= maxAttempts/2) {
+                        break;
+                    }
+                    
+                } while (attempts < maxAttempts);
+                
+                // Ensure position is within bounds
+                randomX = Math.max(8, Math.min(randomX, maxX));
+                randomY = Math.max(8, Math.min(randomY, maxY));
                 
                 // Apply new position
                 noBtn.style.left = `${randomX}px`;
                 noBtn.style.top = `${randomY}px`;
+                
+                // Store current position
+                noButtonPosition.x = randomX;
+                noButtonPosition.y = randomY;
                 
                 // Update attempts counter
                 noButtonAttempts++;
@@ -945,41 +852,40 @@
                 // Reset moving flag after animation completes
                 setTimeout(() => {
                     isMoving = false;
-                    noBtn.classList.remove('moving');
-                }, 400);
+                }, 500);
                 
-                // Prevent default behavior on mobile
-                if (e && e.type === 'touchstart') {
+                // Prevent default behavior
+                if (e) {
                     e.preventDefault();
+                    e.stopPropagation();
                 }
+                return false;
             }
             
             // Function to create mini hearts
             function createMiniHearts() {
-                const heartCount = isMobile ? 2 : 3;
-                
-                for (let i = 0; i < heartCount; i++) {
+                for (let i = 0; i < 3; i++) {
                     setTimeout(() => {
                         const heart = document.createElement('div');
                         heart.innerHTML = '❤️';
                         heart.style.position = 'fixed';
-                        heart.style.fontSize = isMobile ? '14px' : '16px';
+                        heart.style.fontSize = '18px';
                         heart.style.color = '#ff4081';
                         heart.style.left = `${Math.random() * 100}vw`;
                         heart.style.top = `${75 + Math.random() * 20}vh`;
                         heart.style.zIndex = '1000';
                         heart.style.pointerEvents = 'none';
                         heart.style.opacity = '0.9';
-                        heart.style.textShadow = '0 0 5px rgba(255, 255, 255, 0.7)';
+                        heart.style.textShadow = '0 0 8px rgba(255, 255, 255, 0.8)';
                         
                         document.body.appendChild(heart);
                         
                         // Animate the heart
                         const animation = heart.animate([
                             { transform: 'translateY(0) scale(1)', opacity: 1 },
-                            { transform: `translateY(${-25 - Math.random() * 50}px) scale(0.3)`, opacity: 0 }
+                            { transform: `translateY(${-40 - Math.random() * 80}px) scale(0.3)`, opacity: 0 }
                         ], {
-                            duration: 600 + Math.random() * 600,
+                            duration: 800 + Math.random() * 800,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -987,15 +893,12 @@
                         animation.onfinish = () => {
                             heart.remove();
                         };
-                    }, i * 80);
+                    }, i * 100);
                 }
             }
             
             // Function to handle when "Yes" is clicked
             function handleYesClick() {
-                if (isYesClicked) return; // Prevent multiple clicks
-                isYesClicked = true;
-                
                 message.innerHTML = "<span class='success'>YES! You've made me the happiest person in the world! I can't wait to spend forever with you! 💍🎉💖</span>";
                 
                 // Disable both buttons
@@ -1004,14 +907,14 @@
                 noBtn.style.display = 'none';
                 
                 // Make the yes button bigger and change color
-                yesBtn.style.transform = 'scale(1.08)';
+                yesBtn.style.transform = 'scale(1.2)';
                 yesBtn.style.background = 'linear-gradient(135deg, #FF9800, #FF5722, #E65100)';
                 yesBtn.style.borderColor = '#BF360C';
-                yesBtn.style.transition = 'all 0.6s ease';
-                yesBtn.style.boxShadow = '0 12px 20px rgba(255, 87, 34, 0.3)';
+                yesBtn.style.transition = 'all 0.8s ease';
+                yesBtn.style.boxShadow = '0 20px 30px rgba(255, 87, 34, 0.5)';
                 yesBtn.innerHTML = '<span class="ring">💍</span> YES! I WILL MARRY YOU! <span class="ring">💍</span>';
-                yesBtn.style.fontSize = isMobile ? '1.3rem' : '1.5rem';
-                yesBtn.style.padding = isMobile ? '20px 30px' : '22px 40px';
+                yesBtn.style.fontSize = '1.8rem';
+                yesBtn.style.padding = '20px 50px';
                 
                 // Create celebration effect
                 createCelebrationHeartsAndRings();
@@ -1030,46 +933,46 @@
                 // Add a final celebration message
                 setTimeout(() => {
                     const finalMessage = document.createElement('div');
-                    finalMessage.style.marginTop = '15px';
-                    finalMessage.style.fontSize = isMobile ? '1.1rem' : '1.3rem';
+                    finalMessage.style.marginTop = '25px';
+                    finalMessage.style.fontSize = '1.5rem';
                     finalMessage.style.color = '#2E7D32';
                     finalMessage.style.fontWeight = '700';
-                    finalMessage.style.textShadow = '0 0 5px rgba(255, 255, 255, 0.5)';
-                    finalMessage.style.padding = '12px';
+                    finalMessage.style.textShadow = '0 0 8px rgba(255, 255, 255, 0.5)';
+                    finalMessage.style.padding = '18px';
                     finalMessage.style.background = 'rgba(255, 255, 255, 0.9)';
-                    finalMessage.style.borderRadius = '8px';
+                    finalMessage.style.borderRadius = '12px';
                     finalMessage.style.border = '2px solid #4CAF50';
                     finalMessage.innerHTML = 'Our journey to forever begins now! I love you more than words can express! 💑✨';
                     document.querySelector('.message-container').appendChild(finalMessage);
-                }, 1000);
+                }, 1500);
             }
             
             // Function to create celebration hearts and rings
             function createCelebrationHeartsAndRings() {
-                const celebrationCount = isMobile ? 18 : 25;
+                const celebrationCount = 30;
                 
                 for (let i = 0; i < celebrationCount; i++) {
                     setTimeout(() => {
                         const element = document.createElement('div');
                         element.innerHTML = i % 3 === 0 ? '💍' : '❤️';
                         element.style.position = 'fixed';
-                        element.style.fontSize = `${isMobile ? 14 + Math.random() * 20 : 18 + Math.random() * 30}px`;
+                        element.style.fontSize = `${20 + Math.random() * 35}px`;
                         element.style.color = i % 3 === 0 ? '#e0aaff' : '#ff4081';
                         element.style.left = `${Math.random() * 100}vw`;
                         element.style.top = `${Math.random() * 100}vh`;
                         element.style.zIndex = '1000';
                         element.style.pointerEvents = 'none';
                         element.style.opacity = '0.9';
-                        element.style.textShadow = '0 0 8px rgba(255, 255, 255, 0.7)';
+                        element.style.textShadow = '0 0 12px rgba(255, 255, 255, 0.8)';
                         
                         document.body.appendChild(element);
                         
                         // Animate the element
                         const animation = element.animate([
                             { transform: 'translateY(0) scale(1) rotate(0deg)', opacity: 1 },
-                            { transform: `translateY(${-120 - Math.random() * 100}px) scale(0.2) rotate(360deg)`, opacity: 0 }
+                            { transform: `translateY(${-200 - Math.random() * 150}px) scale(0.2) rotate(360deg)`, opacity: 0 }
                         ], {
-                            duration: 1600 + Math.random() * 1000,
+                            duration: 2000 + Math.random() * 1500,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -1077,27 +980,25 @@
                         animation.onfinish = () => {
                             element.remove();
                         };
-                    }, i * (isMobile ? 70 : 50));
+                    }, i * 60);
                 }
             }
             
             // Function to create ring shower
             function createRingShower() {
-                const ringCount = isMobile ? 6 : 10;
-                
-                for (let i = 0; i < ringCount; i++) {
+                for (let i = 0; i < 12; i++) {
                     setTimeout(() => {
                         const ring = document.createElement('div');
                         ring.innerHTML = '💍';
                         ring.style.position = 'fixed';
-                        ring.style.fontSize = isMobile ? '35px' : '50px';
+                        ring.style.fontSize = '60px';
                         ring.style.color = '#e0aaff';
-                        ring.style.left = `${10 + (i * (isMobile ? 12 : 8))}%`;
-                        ring.style.top = '-50px';
+                        ring.style.left = `${10 + (i * 7)}%`;
+                        ring.style.top = '-80px';
                         ring.style.zIndex = '999';
                         ring.style.pointerEvents = 'none';
                         ring.style.opacity = '0.9';
-                        ring.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.7)';
+                        ring.style.textShadow = '0 0 15px rgba(255, 255, 255, 0.9)';
                         ring.style.filter = 'brightness(1.5)';
                         
                         document.body.appendChild(ring);
@@ -1107,22 +1008,22 @@
                             { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
                             { transform: `translateY(100vh) rotate(720deg)`, opacity: 0 }
                         ], {
-                            duration: 1800 + Math.random() * 1000,
+                            duration: 2500 + Math.random() * 1500,
                             easing: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
-                            delay: Math.random() * 500
+                            delay: Math.random() * 800
                         });
                         
                         // Remove ring after animation
                         animation.onfinish = () => {
                             ring.remove();
                         };
-                    }, i * (isMobile ? 150 : 120));
+                    }, i * 150);
                 }
             }
             
             // Function to launch confetti
             function launchConfetti() {
-                const confettiCount = isMobile ? 80 : 120;
+                const confettiCount = 150;
                 
                 for (let i = 0; i < confettiCount; i++) {
                     setTimeout(() => {
@@ -1137,7 +1038,7 @@
                         confetti.style.left = `${Math.random() * 100}vw`;
                         
                         // Random size and shape
-                        const size = isMobile ? 3 + Math.random() * 8 : 5 + Math.random() * 12;
+                        const size = 6 + Math.random() * 15;
                         confetti.style.width = `${size}px`;
                         confetti.style.height = `${size}px`;
                         
@@ -1145,19 +1046,20 @@
                         if (Math.random() > 0.5) {
                             confetti.style.borderRadius = '50%';
                         } else if (Math.random() > 0.7) {
-                            confetti.style.borderRadius = '4%';
+                            confetti.style.borderRadius = '8%';
+                            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
                         }
                         
                         document.body.appendChild(confetti);
                         
                         // Animate confetti
                         const animation = confetti.animate([
-                            { top: '-10px', opacity: 0, transform: 'rotate(0deg) scale(0.5)' },
+                            { top: '-15px', opacity: 0, transform: 'rotate(0deg) scale(0.5)' },
                             { top: '10px', opacity: 1, transform: 'rotate(180deg) scale(1)' },
                             { top: '100vh', opacity: 0, transform: 'rotate(360deg) scale(0.5)' }
                         ], {
-                            duration: 1500 + Math.random() * 1200,
-                            delay: Math.random() * 400,
+                            duration: 2000 + Math.random() * 2000,
+                            delay: Math.random() * 600,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -1165,70 +1067,50 @@
                         animation.onfinish = () => {
                             confetti.remove();
                         };
-                    }, i * (isMobile * 10 : 8));
+                    }, i * 12);
                 }
             }
             
-            // Event listeners for buttons
+            // Event listeners
             yesBtn.addEventListener('click', handleYesClick);
-            yesBtn.addEventListener('touchstart', function(e) {
-                handleYesClick();
-                e.preventDefault(); // Prevent double-tap zoom
-            }, { passive: false });
             
-            // No button events
+            // Make the "No" button move on hover
+            noBtn.addEventListener('mouseover', moveNoButton);
+            
+            // Also move when trying to click (for touch devices and extra security)
             noBtn.addEventListener('click', moveNoButton);
-            noBtn.addEventListener('touchstart', function(e) {
-                moveNoButton(e);
-                e.preventDefault(); // Prevent double-tap zoom
-            }, { passive: false });
             
-            // Mouseover only for desktop
-            if (!isMobile) {
-                noBtn.addEventListener('mouseover', moveNoButton);
-            }
-            
+            // Move when trying to focus with keyboard (tab key)
             noBtn.addEventListener('focus', moveNoButton);
             
-            // Initialize button layout based on screen size
-            function initButtonLayout() {
-                if (window.innerWidth <= 480) {
-                    // Mobile layout - stacked buttons
-                    noBtn.style.position = 'relative';
-                    noBtn.style.left = '0';
-                    noBtn.style.top = '0';
-                    buttonsContainer.style.flexDirection = 'column';
-                } else {
-                    // Desktop/tablet layout - absolute positioning for no button
-                    noBtn.style.position = 'absolute';
-                    const buttonWidth = noBtn.offsetWidth;
-                    const containerWidth = buttonsContainer.offsetWidth;
-                    const initialX = Math.min(containerWidth - buttonWidth - 20, 150);
-                    const initialY = (buttonsContainer.offsetHeight - noBtn.offsetHeight) / 2;
-                    
-                    noBtn.style.left = `${initialX}px`;
-                    noBtn.style.top = `${initialY}px`;
-                    buttonsContainer.style.flexDirection = 'row';
-                }
-            }
+            // Move when trying to touch on mobile devices
+            noBtn.addEventListener('touchstart', moveNoButton);
             
-            // Initialize and adjust on resize
-            initButtonLayout();
-            window.addEventListener('resize', initButtonLayout);
+            // Initialize no button position
+            const buttonWidth = noBtn.offsetWidth;
+            const buttonHeight = noBtn.offsetHeight;
+            const containerWidth = buttonsContainer.offsetWidth;
+            const containerHeight = buttonsContainer.offsetHeight;
+            
+            // Set buttons-container to relative positioning
+            buttonsContainer.style.position = 'relative';
+            
+            // Initial position - away from the Yes button
+            const initialX = Math.min(containerWidth - buttonWidth - 15, 200);
+            const initialY = (containerHeight - buttonHeight) / 2;
+            
+            noBtn.style.left = `${initialX}px`;
+            noBtn.style.top = `${initialY}px`;
+            noButtonPosition.x = initialX;
+            noButtonPosition.y = initialY;
             
             // Occasionally move the button even without interaction
-            let moveInterval = setInterval(() => {
-                // Lower chance on mobile to save battery
-                const chance = isMobile ? 0.04 : 0.06;
-                if (Math.random() < chance && !isYesClicked && !isMoving && window.innerWidth > 480) {
+            setInterval(() => {
+                // 8% chance to move on its own
+                if (Math.random() < 0.08 && !yesBtn.disabled && !isMoving) {
                     moveNoButton();
                 }
-            }, isMobile ? 4000 : 3000);
-            
-            // Clean up interval when yes is clicked
-            yesBtn.addEventListener('click', function() {
-                clearInterval(moveInterval);
-            });
+            }, 3500);
         });
     </script>
 </body>
