@@ -16,7 +16,7 @@
         body {
             background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
             overflow-x: hidden;
-            padding: 15px;
+            padding: 10px;
             transition: background 0.8s ease;
             min-height: 100vh;
             color: white;
@@ -26,38 +26,38 @@
         .page-container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px 0;
+            padding: 15px 0;
             width: 100%;
         }
         
         .container {
             background-color: rgba(255, 255, 255, 0.98);
-            border-radius: 20px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            border-radius: 18px;
+            padding: 25px 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             text-align: center;
             width: 100%;
-            border: 5px solid #e0aaff;
+            border: 4px solid #e0aaff;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             z-index: 2;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         h1 {
             color: #9d4edd;
-            font-size: clamp(2rem, 6vw, 2.8rem);
-            margin-bottom: 12px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: clamp(1.8rem, 6vw, 2.6rem);
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
             font-weight: 800;
             line-height: 1.2;
-            padding: 0 10px;
+            padding: 0 5px;
         }
         
         .ring-emoji {
-            font-size: clamp(2.2rem, 7vw, 3rem);
-            margin: 0 8px;
+            font-size: clamp(2rem, 6vw, 2.8rem);
+            margin: 0 5px;
             animation: ringSpin 8s linear infinite;
             display: inline-block;
         }
@@ -70,13 +70,13 @@
         
         .name-highlight {
             color: #7b2cbf;
-            font-size: clamp(2.2rem, 7vw, 3.2rem);
+            font-size: clamp(2rem, 6.5vw, 3rem);
             font-weight: 900;
-            margin: 15px 0;
+            margin: 12px 0;
             text-transform: capitalize;
             position: relative;
             display: inline-block;
-            padding: 0 12px;
+            padding: 0 10px;
             background: linear-gradient(135deg, #f9c5ff, #e0aaff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -89,51 +89,56 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-size: clamp(1.3rem, 4vw, 2rem);
             opacity: 0.9;
         }
         
         .name-highlight::before {
-            left: -25px;
+            left: -20px;
         }
         
         .name-highlight::after {
-            right: -25px;
+            right: -20px;
         }
         
         .question {
-            font-size: clamp(1.2rem, 4vw, 1.6rem);
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-weight: 600;
             line-height: 1.5;
             background: rgba(240, 230, 255, 0.95);
-            padding: 18px 15px;
-            border-radius: 12px;
-            border-left: 4px solid #9d4edd;
-            border-right: 4px solid #9d4edd;
-            margin-top: 10px;
+            padding: 15px 12px;
+            border-radius: 10px;
+            border-left: 3px solid #9d4edd;
+            border-right: 3px solid #9d4edd;
+            margin-top: 8px;
         }
         
         .buttons-section {
             background: rgba(255, 245, 255, 0.97);
-            border-radius: 16px;
-            padding: 25px 15px;
-            margin: 25px 0;
-            box-shadow: inset 0 0 12px rgba(157, 78, 221, 0.15);
+            border-radius: 14px;
+            padding: 20px 12px;
+            margin: 20px 0;
+            box-shadow: inset 0 0 10px rgba(157, 78, 221, 0.1);
             position: relative;
-            min-height: 180px;
+            min-height: 220px;
             transition: all 0.3s ease;
-            border: 3px solid #e0aaff;
+            border: 2px solid #e0aaff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .buttons-section-title {
             color: #9d4edd;
-            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
-            margin-bottom: 20px;
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            margin-bottom: 15px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
+            text-align: center;
         }
         
         .buttons-container {
@@ -141,33 +146,36 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin-top: 10px;
+            gap: 15px;
+            margin-top: 5px;
             position: relative;
-            min-height: 150px;
             width: 100%;
+            min-height: 160px;
         }
         
         .proposal-btn {
-            padding: 16px 30px;
-            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            padding: 16px 25px;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
             border: none;
-            border-radius: 45px;
+            border-radius: 40px;
             cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             font-weight: 700;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
-            min-width: 200px;
-            max-width: 300px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             width: 90%;
+            max-width: 280px;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             position: relative;
             z-index: 10;
             letter-spacing: 0.5px;
             touch-action: manipulation;
+            -webkit-appearance: none;
+            appearance: none;
+            min-height: 55px;
+            margin: 5px 0;
         }
         
         .yes-btn {
@@ -177,32 +185,42 @@
             order: 1;
         }
         
-        .yes-btn:hover:not(:disabled), .yes-btn:active:not(:disabled) {
-            transform: scale(1.08);
-            box-shadow: 0 12px 20px rgba(76, 175, 80, 0.3);
+        .yes-btn:active, .yes-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 18px rgba(76, 175, 80, 0.25);
             background: linear-gradient(135deg, #2E7D32, #1B5E20);
+        }
+        
+        .yes-btn:disabled {
+            opacity: 0.9;
+            cursor: default;
         }
         
         .no-btn {
             background: linear-gradient(135deg, #f44336, #c62828);
             color: white;
             transition: all 0.3s ease;
-            position: relative;
             border: 3px solid #b71c1c;
             z-index: 20;
             order: 2;
-            width: 90%;
-            max-width: 300px;
+            position: relative !important;
+            left: 0 !important;
+            top: 0 !important;
+            transform: none !important;
         }
         
-        .no-btn:hover, .no-btn:active {
+        .no-btn:active, .no-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 12px 20px rgba(244, 67, 54, 0.3);
+            box-shadow: 0 10px 18px rgba(244, 67, 54, 0.25);
+        }
+        
+        .no-btn.moving {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
         .heart, .ring {
             color: #ff4081;
-            font-size: clamp(1.3rem, 4vw, 1.7rem);
+            font-size: clamp(1.2rem, 4vw, 1.6rem);
             animation: heartbeat 1.5s infinite;
             display: inline-block;
         }
@@ -227,56 +245,57 @@
         }
         
         .message-container {
-            margin-top: 25px;
-            padding: 20px 15px;
-            border-radius: 12px;
+            margin-top: 20px;
+            padding: 18px 12px;
+            border-radius: 10px;
             background: linear-gradient(135deg, rgba(240, 230, 255, 0.95), rgba(255, 240, 245, 0.95));
-            min-height: 80px;
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.4s ease;
             border: 2px solid #9d4edd;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
         }
         
         .message {
-            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
             color: #666;
             font-weight: 600;
             transition: all 0.3s ease;
             text-align: center;
             line-height: 1.4;
+            padding: 0 5px;
         }
         
         .success {
             color: #4CAF50;
-            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-size: clamp(1.3rem, 4.5vw, 1.8rem);
             font-weight: bold;
             animation: celebrate 0.8s infinite alternate;
-            text-shadow: 0 0 8px rgba(76, 175, 80, 0.25);
+            text-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
             line-height: 1.3;
         }
         
         @keyframes celebrate {
-            from { transform: scale(1); text-shadow: 0 0 8px rgba(76, 175, 80, 0.25); }
-            to { transform: scale(1.05); text-shadow: 0 0 12px rgba(76, 175, 80, 0.4); }
+            from { transform: scale(1); text-shadow: 0 0 6px rgba(76, 175, 80, 0.2); }
+            to { transform: scale(1.04); text-shadow: 0 0 10px rgba(76, 175, 80, 0.3); }
         }
         
         .counter-container {
-            margin-top: 20px;
-            padding: 12px 15px;
+            margin-top: 15px;
+            padding: 10px 12px;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
+            border-radius: 8px;
             display: inline-block;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
             border: 2px solid #e0aaff;
             max-width: 90%;
         }
         
         .attempt-counter {
             color: #777;
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
             font-weight: 600;
             text-align: center;
             line-height: 1.4;
@@ -285,20 +304,20 @@
         .counter-number {
             color: #9d4edd;
             font-weight: 800;
-            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
         }
         
         .footer {
-            margin-top: 30px;
+            margin-top: 25px;
             color: #fff;
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding-top: 20px;
-            border-top: 2px solid rgba(224, 170, 255, 0.25);
-            text-shadow: 0 0 6px rgba(224, 170, 255, 0.4);
+            gap: 8px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(224, 170, 255, 0.2);
+            text-shadow: 0 0 5px rgba(224, 170, 255, 0.3);
             text-align: center;
             flex-wrap: wrap;
         }
@@ -316,9 +335,9 @@
         
         .floating-heart, .floating-ring {
             position: absolute;
-            font-size: clamp(16px, 4vw, 24px);
+            font-size: clamp(14px, 3.5vw, 20px);
             animation: float 10s linear infinite;
-            opacity: 0.7;
+            opacity: 0.6;
         }
         
         .floating-ring {
@@ -331,10 +350,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.8;
+                opacity: 0.7;
             }
             90% {
-                opacity: 0.8;
+                opacity: 0.7;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg);
@@ -348,13 +367,13 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.9;
+                opacity: 0.8;
             }
             50% {
                 transform: rotate(180deg) scale(1.1);
             }
             90% {
-                opacity: 0.8;
+                opacity: 0.7;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg) scale(1);
@@ -364,87 +383,82 @@
         
         /* Scrollable content sections */
         .scroll-content {
-            margin-top: 30px;
+            margin-top: 25px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 20px;
             width: 100%;
         }
         
         .content-card {
             background: rgba(255, 255, 255, 0.97);
-            border-radius: 16px;
-            padding: 25px 20px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+            border-radius: 14px;
+            padding: 20px 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             border: 3px solid #e0aaff;
             transition: all 0.3s ease;
             text-align: left;
             width: 100%;
         }
         
-        .content-card:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-        }
-        
         .content-card h2 {
             color: #7b2cbf;
-            font-size: clamp(1.4rem, 4vw, 1.7rem);
-            margin-bottom: 15px;
+            font-size: clamp(1.3rem, 4vw, 1.6rem);
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border-bottom: 2px solid #e0aaff;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
             line-height: 1.3;
         }
         
         .content-card p {
             color: #555;
-            font-size: clamp(1rem, 3.2vw, 1.15rem);
-            line-height: 1.6;
-            margin-bottom: 15px;
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
+            line-height: 1.5;
+            margin-bottom: 12px;
         }
         
         .content-card ul {
             text-align: left;
-            padding-left: 20px;
+            padding-left: 18px;
             color: #666;
-            font-size: clamp(0.95rem, 3vw, 1.05rem);
-            line-height: 1.7;
+            font-size: clamp(0.9rem, 2.8vw, 1.05rem);
+            line-height: 1.6;
         }
         
         .content-card li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             position: relative;
-            padding-left: 8px;
+            padding-left: 6px;
         }
         
         .content-card li:before {
             content: "💕";
             position: absolute;
-            left: -20px;
-            font-size: 1rem;
+            left: -18px;
+            font-size: 0.9rem;
         }
         
         .proposal-ring {
             text-align: center;
-            margin: 25px auto;
+            margin: 20px auto;
             max-width: 100%;
             width: 100%;
         }
         
         .ring-display {
-            width: clamp(160px, 50vw, 220px);
-            height: clamp(160px, 50vw, 220px);
-            margin: 0 auto 20px;
+            width: clamp(140px, 45vw, 200px);
+            height: clamp(140px, 45vw, 200px);
+            margin: 0 auto 15px;
             background: radial-gradient(circle, #fff 0%, #f9f0ff 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 25px rgba(224, 170, 255, 0.5);
-            border: 6px solid #e0aaff;
+            box-shadow: 0 0 20px rgba(224, 170, 255, 0.4);
+            border: 5px solid #e0aaff;
             animation: ringPulse 4s infinite;
             position: relative;
             overflow: hidden;
@@ -453,23 +467,23 @@
         .ring-display:before {
             content: "";
             position: absolute;
-            width: clamp(180px, 55vw, 250px);
-            height: clamp(180px, 55vw, 250px);
+            width: clamp(160px, 50vw, 230px);
+            height: clamp(160px, 50vw, 230px);
             background: conic-gradient(transparent, #9d4edd, transparent);
             animation: rotate 3s linear infinite;
         }
         
         .ring-display:after {
             content: "💍";
-            font-size: clamp(70px, 20vw, 110px);
+            font-size: clamp(60px, 18vw, 100px);
             position: relative;
             z-index: 2;
             animation: ringFloat 3s ease-in-out infinite;
         }
         
         @keyframes ringPulse {
-            0%, 100% { box-shadow: 0 0 25px rgba(224, 170, 255, 0.5); }
-            50% { box-shadow: 0 0 45px rgba(224, 170, 255, 0.7); }
+            0%, 100% { box-shadow: 0 0 20px rgba(224, 170, 255, 0.4); }
+            50% { box-shadow: 0 0 35px rgba(224, 170, 255, 0.6); }
         }
         
         @keyframes rotate {
@@ -479,50 +493,50 @@
         
         @keyframes ringFloat {
             0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-12px) scale(1.06); }
+            50% { transform: translateY(-10px) scale(1.05); }
         }
         
         .ring-message {
             color: white;
-            font-size: clamp(1.1rem, 3.5vw, 1.4rem);
-            margin-top: 20px;
-            text-shadow: 0 0 6px rgba(224, 170, 255, 0.5);
-            background: rgba(157, 78, 221, 0.2);
-            padding: 15px;
-            border-radius: 10px;
+            font-size: clamp(1rem, 3.5vw, 1.3rem);
+            margin-top: 15px;
+            text-shadow: 0 0 5px rgba(224, 170, 255, 0.4);
+            background: rgba(157, 78, 221, 0.15);
+            padding: 12px 10px;
+            border-radius: 8px;
             border: 2px solid #e0aaff;
             line-height: 1.4;
         }
         
         .scroll-indicator {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 15px;
             color: #e0aaff;
-            font-size: clamp(1rem, 3vw, 1.2rem);
+            font-size: clamp(0.95rem, 3vw, 1.1rem);
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             animation: bounce 2s infinite;
-            text-shadow: 0 0 6px rgba(224, 170, 255, 0.5);
+            text-shadow: 0 0 5px rgba(224, 170, 255, 0.4);
         }
         
         .scroll-indicator i {
-            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
         }
         
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-8px);}
-            60% {transform: translateY(-4px);}
+            40% {transform: translateY(-6px);}
+            60% {transform: translateY(-3px);}
         }
         
         .confetti {
             position: fixed;
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             background-color: #9d4edd;
-            top: -15px;
+            top: -10px;
             z-index: 1000;
             opacity: 0;
             border-radius: 50%;
@@ -531,25 +545,27 @@
         /* Button instructions */
         .instructions {
             color: #9d4edd;
-            font-size: clamp(0.9rem, 2.8vw, 1.1rem);
-            margin-top: 12px;
+            font-size: clamp(0.85rem, 2.8vw, 1rem);
+            margin-top: 10px;
             font-style: italic;
             font-weight: 600;
-            text-shadow: 0 0 3px rgba(224, 170, 255, 0.4);
+            text-shadow: 0 0 3px rgba(224, 170, 255, 0.3);
             text-align: center;
+            padding: 0 10px;
         }
         
         /* Tablet and larger mobile screens */
-        @media (min-width: 481px) and (max-width: 768px) {
+        @media (min-width: 481px) {
             .container {
-                padding: 35px 25px;
+                padding: 30px 25px;
+                border-radius: 20px;
             }
             
             .buttons-container {
                 flex-direction: row;
                 flex-wrap: wrap;
-                gap: 25px;
-                min-height: 130px;
+                gap: 20px;
+                min-height: 140px;
             }
             
             .proposal-btn {
@@ -559,18 +575,22 @@
             }
             
             .no-btn {
-                position: absolute;
+                position: absolute !important;
                 width: auto;
             }
             
             .scroll-content {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 20px;
             }
             
             .content-card:last-child {
                 grid-column: span 2;
+            }
+            
+            body {
+                padding: 15px;
             }
         }
         
@@ -584,104 +604,138 @@
             .buttons-container {
                 flex-direction: row;
                 gap: 40px;
-                min-height: 140px;
+                min-height: 150px;
             }
             
             .proposal-btn {
-                min-width: 180px;
+                min-width: 200px;
                 width: auto;
-                padding: 18px 45px;
-                font-size: 1.5rem;
+                padding: 20px 45px;
+                font-size: 1.4rem;
             }
             
             .no-btn {
-                position: absolute;
+                position: absolute !important;
                 width: auto;
             }
             
             .scroll-content {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
+                gap: 25px;
+            }
+            
+            .content-card:last-child {
+                grid-column: span 1;
             }
             
             body {
-                padding: 25px;
+                padding: 20px;
             }
         }
         
-        /* Small mobile screens */
+        /* Very small mobile screens */
         @media (max-width: 360px) {
             .container {
-                padding: 25px 15px;
+                padding: 20px 12px;
             }
             
             .proposal-btn {
                 width: 95%;
-                padding: 14px 25px;
+                padding: 14px 20px;
+                font-size: 1.1rem;
+                min-height: 50px;
             }
             
             .ring-display {
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
             }
             
             .ring-display:after {
-                font-size: 60px;
+                font-size: 50px;
+            }
+            
+            .buttons-section {
+                min-height: 200px;
             }
         }
         
         /* Landscape orientation */
         @media (max-height: 600px) and (orientation: landscape) {
             .container {
-                padding: 20px;
-                margin-bottom: 20px;
-            }
-            
-            .buttons-section {
-                padding: 20px 15px;
-                min-height: 150px;
-            }
-            
-            .buttons-container {
-                min-height: 120px;
-            }
-            
-            .proposal-btn {
-                padding: 12px 25px;
-                font-size: 1.2rem;
-            }
-            
-            .question {
-                margin-bottom: 20px;
                 padding: 15px;
-            }
-            
-            .ring-display {
-                width: 120px;
-                height: 120px;
                 margin-bottom: 15px;
             }
             
+            .buttons-section {
+                padding: 15px 10px;
+                min-height: 140px;
+            }
+            
+            .buttons-container {
+                min-height: 110px;
+                flex-direction: row;
+                gap: 15px;
+            }
+            
+            .proposal-btn {
+                padding: 10px 20px;
+                font-size: 1.1rem;
+                min-height: 45px;
+                width: auto;
+                min-width: 140px;
+            }
+            
+            .question {
+                margin-bottom: 15px;
+                padding: 12px;
+            }
+            
+            .ring-display {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 10px;
+            }
+            
             .ring-display:after {
-                font-size: 50px;
+                font-size: 40px;
             }
         }
         
-        /* Prevent text size adjustment on mobile */
+        /* Fix for iOS Safari */
+        @supports (-webkit-touch-callout: none) {
+            .proposal-btn {
+                padding: 18px 25px;
+            }
+        }
+        
+        /* Prevent text size adjustment */
         html {
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
         
-        /* Improve touch targets */
-        button, .proposal-btn {
-            min-height: 50px;
-        }
-        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
+        }
+        
+        /* Focus styles for accessibility */
+        .proposal-btn:focus {
+            outline: 2px solid #9d4edd;
+            outline-offset: 2px;
+        }
+        
+        /* Fix for mobile hover states */
+        @media (hover: none) {
+            .yes-btn:hover, .no-btn:hover {
+                transform: none;
+            }
+            
+            .yes-btn:active, .no-btn:active {
+                transform: scale(0.98);
+            }
         }
     </style>
 </head>
@@ -769,7 +823,7 @@
         </div>
         
         <div class="footer">
-            Made with all my love <span class="heart" style="font-size: 1.3rem;">❤️</span> For Chetan, my forever person
+            Made with all my love <span class="heart" style="font-size: 1.2rem;">❤️</span> For Chetan, my forever person
         </div>
         
         <div class="hearts-background" id="heartsBackground"></div>
@@ -786,13 +840,13 @@
             const body = document.querySelector('body');
             
             let noButtonAttempts = 0;
-            let noButtonPosition = { x: 0, y: 0 };
             let isMoving = false;
             let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            let isYesClicked = false;
             
             // Create floating hearts and rings in background
             function createFloatingElements() {
-                const elementCount = isMobile ? 15 : 20;
+                const elementCount = isMobile ? 12 : 18;
                 
                 for (let i = 0; i < elementCount; i++) {
                     const element = document.createElement('div');
@@ -801,9 +855,9 @@
                     
                     const leftPos = Math.random() * 100;
                     const animationDuration = 6 + Math.random() * 10;
-                    const fontSize = isMobile ? 14 + Math.random() * 20 : 18 + Math.random() * 25;
+                    const fontSize = isMobile ? 12 + Math.random() * 16 : 15 + Math.random() * 20;
                     const delay = Math.random() * 8;
-                    const colorOpacity = 0.2 + Math.random() * 0.3;
+                    const colorOpacity = 0.15 + Math.random() * 0.25;
                     
                     element.style.left = `${leftPos}%`;
                     element.style.fontSize = `${fontSize}px`;
@@ -824,44 +878,40 @@
             
             // Function to move the "No" button to a random position
             function moveNoButton(e) {
-                if (yesBtn.disabled || isMoving) return; // Don't move if "Yes" was already clicked or already moving
+                if (isYesClicked || isMoving) return; // Don't move if "Yes" was already clicked or already moving
                 
                 isMoving = true;
-                noBtn.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                noBtn.classList.add('moving');
                 
                 const buttonWidth = noBtn.offsetWidth;
                 const buttonHeight = noBtn.offsetHeight;
                 const containerWidth = buttonsContainer.offsetWidth;
                 const containerHeight = buttonsContainer.offsetHeight;
                 
-                // Calculate maximum positions (considering button size)
-                const maxX = containerWidth - buttonWidth - 10;
-                const maxY = containerHeight - buttonHeight - 10;
+                // Calculate maximum positions
+                const maxX = containerWidth - buttonWidth - 20;
+                const maxY = containerHeight - buttonHeight - 20;
                 
                 // For mobile, use simpler positioning
                 let randomX, randomY;
                 
                 if (window.innerWidth <= 480) {
-                    // On mobile, buttons are stacked, so just move vertically
-                    randomX = 0;
-                    randomY = Math.random() > 0.5 ? 10 : (containerHeight - buttonHeight - 10);
+                    // On mobile, buttons are stacked, so just move within container
+                    randomX = Math.max(10, Math.min(Math.floor(Math.random() * maxX), maxX));
+                    randomY = Math.max(10, Math.min(Math.floor(Math.random() * maxY), maxY));
                 } else {
                     // On larger screens, use random positioning
                     randomX = Math.floor(Math.random() * maxX);
                     randomY = Math.floor(Math.random() * maxY);
                     
                     // Ensure position is within bounds
-                    randomX = Math.max(5, Math.min(randomX, maxX));
-                    randomY = Math.max(5, Math.min(randomY, maxY));
+                    randomX = Math.max(10, Math.min(randomX, maxX));
+                    randomY = Math.max(10, Math.min(randomY, maxY));
                 }
                 
                 // Apply new position
                 noBtn.style.left = `${randomX}px`;
                 noBtn.style.top = `${randomY}px`;
-                
-                // Store current position
-                noButtonPosition.x = randomX;
-                noButtonPosition.y = randomY;
                 
                 // Update attempts counter
                 noButtonAttempts++;
@@ -895,14 +945,13 @@
                 // Reset moving flag after animation completes
                 setTimeout(() => {
                     isMoving = false;
+                    noBtn.classList.remove('moving');
                 }, 400);
                 
-                // Prevent default behavior
-                if (e) {
+                // Prevent default behavior on mobile
+                if (e && e.type === 'touchstart') {
                     e.preventDefault();
-                    e.stopPropagation();
                 }
-                return false;
             }
             
             // Function to create mini hearts
@@ -914,23 +963,23 @@
                         const heart = document.createElement('div');
                         heart.innerHTML = '❤️';
                         heart.style.position = 'fixed';
-                        heart.style.fontSize = isMobile ? '16px' : '18px';
+                        heart.style.fontSize = isMobile ? '14px' : '16px';
                         heart.style.color = '#ff4081';
                         heart.style.left = `${Math.random() * 100}vw`;
                         heart.style.top = `${75 + Math.random() * 20}vh`;
                         heart.style.zIndex = '1000';
                         heart.style.pointerEvents = 'none';
                         heart.style.opacity = '0.9';
-                        heart.style.textShadow = '0 0 6px rgba(255, 255, 255, 0.8)';
+                        heart.style.textShadow = '0 0 5px rgba(255, 255, 255, 0.7)';
                         
                         document.body.appendChild(heart);
                         
                         // Animate the heart
                         const animation = heart.animate([
                             { transform: 'translateY(0) scale(1)', opacity: 1 },
-                            { transform: `translateY(${-30 - Math.random() * 60}px) scale(0.3)`, opacity: 0 }
+                            { transform: `translateY(${-25 - Math.random() * 50}px) scale(0.3)`, opacity: 0 }
                         ], {
-                            duration: 700 + Math.random() * 700,
+                            duration: 600 + Math.random() * 600,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -938,12 +987,15 @@
                         animation.onfinish = () => {
                             heart.remove();
                         };
-                    }, i * 100);
+                    }, i * 80);
                 }
             }
             
             // Function to handle when "Yes" is clicked
             function handleYesClick() {
+                if (isYesClicked) return; // Prevent multiple clicks
+                isYesClicked = true;
+                
                 message.innerHTML = "<span class='success'>YES! You've made me the happiest person in the world! I can't wait to spend forever with you! 💍🎉💖</span>";
                 
                 // Disable both buttons
@@ -952,13 +1004,14 @@
                 noBtn.style.display = 'none';
                 
                 // Make the yes button bigger and change color
-                yesBtn.style.transform = 'scale(1.1)';
+                yesBtn.style.transform = 'scale(1.08)';
                 yesBtn.style.background = 'linear-gradient(135deg, #FF9800, #FF5722, #E65100)';
                 yesBtn.style.borderColor = '#BF360C';
                 yesBtn.style.transition = 'all 0.6s ease';
-                yesBtn.style.boxShadow = '0 15px 25px rgba(255, 87, 34, 0.4)';
+                yesBtn.style.boxShadow = '0 12px 20px rgba(255, 87, 34, 0.3)';
                 yesBtn.innerHTML = '<span class="ring">💍</span> YES! I WILL MARRY YOU! <span class="ring">💍</span>';
-                yesBtn.style.fontSize = isMobile ? '1.4rem' : '1.6rem';
+                yesBtn.style.fontSize = isMobile ? '1.3rem' : '1.5rem';
+                yesBtn.style.padding = isMobile ? '20px 30px' : '22px 40px';
                 
                 // Create celebration effect
                 createCelebrationHeartsAndRings();
@@ -977,46 +1030,46 @@
                 // Add a final celebration message
                 setTimeout(() => {
                     const finalMessage = document.createElement('div');
-                    finalMessage.style.marginTop = '20px';
-                    finalMessage.style.fontSize = isMobile ? '1.2rem' : '1.4rem';
+                    finalMessage.style.marginTop = '15px';
+                    finalMessage.style.fontSize = isMobile ? '1.1rem' : '1.3rem';
                     finalMessage.style.color = '#2E7D32';
                     finalMessage.style.fontWeight = '700';
-                    finalMessage.style.textShadow = '0 0 6px rgba(255, 255, 255, 0.5)';
-                    finalMessage.style.padding = '15px';
+                    finalMessage.style.textShadow = '0 0 5px rgba(255, 255, 255, 0.5)';
+                    finalMessage.style.padding = '12px';
                     finalMessage.style.background = 'rgba(255, 255, 255, 0.9)';
-                    finalMessage.style.borderRadius = '10px';
+                    finalMessage.style.borderRadius = '8px';
                     finalMessage.style.border = '2px solid #4CAF50';
                     finalMessage.innerHTML = 'Our journey to forever begins now! I love you more than words can express! 💑✨';
                     document.querySelector('.message-container').appendChild(finalMessage);
-                }, 1200);
+                }, 1000);
             }
             
             // Function to create celebration hearts and rings
             function createCelebrationHeartsAndRings() {
-                const celebrationCount = isMobile ? 20 : 30;
+                const celebrationCount = isMobile ? 18 : 25;
                 
                 for (let i = 0; i < celebrationCount; i++) {
                     setTimeout(() => {
                         const element = document.createElement('div');
                         element.innerHTML = i % 3 === 0 ? '💍' : '❤️';
                         element.style.position = 'fixed';
-                        element.style.fontSize = `${isMobile ? 15 + Math.random() * 25 : 20 + Math.random() * 35}px`;
+                        element.style.fontSize = `${isMobile ? 14 + Math.random() * 20 : 18 + Math.random() * 30}px`;
                         element.style.color = i % 3 === 0 ? '#e0aaff' : '#ff4081';
                         element.style.left = `${Math.random() * 100}vw`;
                         element.style.top = `${Math.random() * 100}vh`;
                         element.style.zIndex = '1000';
                         element.style.pointerEvents = 'none';
                         element.style.opacity = '0.9';
-                        element.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.8)';
+                        element.style.textShadow = '0 0 8px rgba(255, 255, 255, 0.7)';
                         
                         document.body.appendChild(element);
                         
                         // Animate the element
                         const animation = element.animate([
                             { transform: 'translateY(0) scale(1) rotate(0deg)', opacity: 1 },
-                            { transform: `translateY(${-150 - Math.random() * 120}px) scale(0.2) rotate(360deg)`, opacity: 0 }
+                            { transform: `translateY(${-120 - Math.random() * 100}px) scale(0.2) rotate(360deg)`, opacity: 0 }
                         ], {
-                            duration: 1800 + Math.random() * 1200,
+                            duration: 1600 + Math.random() * 1000,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -1024,27 +1077,27 @@
                         animation.onfinish = () => {
                             element.remove();
                         };
-                    }, i * (isMobile ? 80 : 60));
+                    }, i * (isMobile ? 70 : 50));
                 }
             }
             
             // Function to create ring shower
             function createRingShower() {
-                const ringCount = isMobile ? 8 : 12;
+                const ringCount = isMobile ? 6 : 10;
                 
                 for (let i = 0; i < ringCount; i++) {
                     setTimeout(() => {
                         const ring = document.createElement('div');
                         ring.innerHTML = '💍';
                         ring.style.position = 'fixed';
-                        ring.style.fontSize = isMobile ? '45px' : '60px';
+                        ring.style.fontSize = isMobile ? '35px' : '50px';
                         ring.style.color = '#e0aaff';
-                        ring.style.left = `${10 + (i * (isMobile ? 10 : 7))}%`;
-                        ring.style.top = '-60px';
+                        ring.style.left = `${10 + (i * (isMobile ? 12 : 8))}%`;
+                        ring.style.top = '-50px';
                         ring.style.zIndex = '999';
                         ring.style.pointerEvents = 'none';
                         ring.style.opacity = '0.9';
-                        ring.style.textShadow = '0 0 12px rgba(255, 255, 255, 0.8)';
+                        ring.style.textShadow = '0 0 10px rgba(255, 255, 255, 0.7)';
                         ring.style.filter = 'brightness(1.5)';
                         
                         document.body.appendChild(ring);
@@ -1054,22 +1107,22 @@
                             { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
                             { transform: `translateY(100vh) rotate(720deg)`, opacity: 0 }
                         ], {
-                            duration: 2000 + Math.random() * 1200,
+                            duration: 1800 + Math.random() * 1000,
                             easing: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
-                            delay: Math.random() * 600
+                            delay: Math.random() * 500
                         });
                         
                         // Remove ring after animation
                         animation.onfinish = () => {
                             ring.remove();
                         };
-                    }, i * (isMobile ? 180 : 150));
+                    }, i * (isMobile ? 150 : 120));
                 }
             }
             
             // Function to launch confetti
             function launchConfetti() {
-                const confettiCount = isMobile ? 100 : 150;
+                const confettiCount = isMobile ? 80 : 120;
                 
                 for (let i = 0; i < confettiCount; i++) {
                     setTimeout(() => {
@@ -1084,7 +1137,7 @@
                         confetti.style.left = `${Math.random() * 100}vw`;
                         
                         // Random size and shape
-                        const size = isMobile ? 4 + Math.random() * 12 : 6 + Math.random() * 15;
+                        const size = isMobile ? 3 + Math.random() * 8 : 5 + Math.random() * 12;
                         confetti.style.width = `${size}px`;
                         confetti.style.height = `${size}px`;
                         
@@ -1092,20 +1145,19 @@
                         if (Math.random() > 0.5) {
                             confetti.style.borderRadius = '50%';
                         } else if (Math.random() > 0.7) {
-                            confetti.style.borderRadius = '6%';
-                            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+                            confetti.style.borderRadius = '4%';
                         }
                         
                         document.body.appendChild(confetti);
                         
                         // Animate confetti
                         const animation = confetti.animate([
-                            { top: '-12px', opacity: 0, transform: 'rotate(0deg) scale(0.5)' },
+                            { top: '-10px', opacity: 0, transform: 'rotate(0deg) scale(0.5)' },
                             { top: '10px', opacity: 1, transform: 'rotate(180deg) scale(1)' },
                             { top: '100vh', opacity: 0, transform: 'rotate(360deg) scale(0.5)' }
                         ], {
-                            duration: 1800 + Math.random() * 1500,
-                            delay: Math.random() * 500,
+                            duration: 1500 + Math.random() * 1200,
+                            delay: Math.random() * 400,
                             easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
                         });
                         
@@ -1113,84 +1165,70 @@
                         animation.onfinish = () => {
                             confetti.remove();
                         };
-                    }, i * (isMobile ? 15 : 12));
+                    }, i * (isMobile * 10 : 8));
                 }
             }
             
-            // Event listeners
+            // Event listeners for buttons
             yesBtn.addEventListener('click', handleYesClick);
+            yesBtn.addEventListener('touchstart', function(e) {
+                handleYesClick();
+                e.preventDefault(); // Prevent double-tap zoom
+            }, { passive: false });
             
-            // For mobile, use touch events
-            if (isMobile) {
-                noBtn.addEventListener('touchstart', function(e) {
-                    moveNoButton(e);
-                    // Prevent default to avoid zooming
-                    e.preventDefault();
-                }, { passive: false });
-                
-                yesBtn.addEventListener('touchstart', function(e) {
-                    // Prevent zooming on double tap
-                    e.preventDefault();
-                }, { passive: false });
-            } else {
-                // Desktop events
+            // No button events
+            noBtn.addEventListener('click', moveNoButton);
+            noBtn.addEventListener('touchstart', function(e) {
+                moveNoButton(e);
+                e.preventDefault(); // Prevent double-tap zoom
+            }, { passive: false });
+            
+            // Mouseover only for desktop
+            if (!isMobile) {
                 noBtn.addEventListener('mouseover', moveNoButton);
             }
             
-            // Common events for all devices
-            noBtn.addEventListener('click', moveNoButton);
             noBtn.addEventListener('focus', moveNoButton);
             
-            // Initialize no button position
-            const buttonWidth = noBtn.offsetWidth;
-            const buttonHeight = noBtn.offsetHeight;
-            const containerWidth = buttonsContainer.offsetWidth;
-            const containerHeight = buttonsContainer.offsetHeight;
-            
-            // Set buttons-container to relative positioning
-            buttonsContainer.style.position = 'relative';
-            
-            // For mobile, stack buttons; for desktop, position them
-            if (window.innerWidth <= 480) {
-                noBtn.style.position = 'relative';
-                noBtn.style.left = '0';
-                noBtn.style.top = '0';
-                noButtonPosition.x = 0;
-                noButtonPosition.y = 0;
-            } else {
-                // Initial position - away from the Yes button
-                const initialX = Math.min(containerWidth - buttonWidth - 15, 150);
-                const initialY = (containerHeight - buttonHeight) / 2;
-                
-                noBtn.style.left = `${initialX}px`;
-                noBtn.style.top = `${initialY}px`;
-                noButtonPosition.x = initialX;
-                noButtonPosition.y = initialY;
-            }
-            
-            // Adjust button layout on window resize
-            function adjustButtonLayout() {
+            // Initialize button layout based on screen size
+            function initButtonLayout() {
                 if (window.innerWidth <= 480) {
+                    // Mobile layout - stacked buttons
                     noBtn.style.position = 'relative';
                     noBtn.style.left = '0';
                     noBtn.style.top = '0';
                     buttonsContainer.style.flexDirection = 'column';
                 } else {
+                    // Desktop/tablet layout - absolute positioning for no button
                     noBtn.style.position = 'absolute';
+                    const buttonWidth = noBtn.offsetWidth;
+                    const containerWidth = buttonsContainer.offsetWidth;
+                    const initialX = Math.min(containerWidth - buttonWidth - 20, 150);
+                    const initialY = (buttonsContainer.offsetHeight - noBtn.offsetHeight) / 2;
+                    
+                    noBtn.style.left = `${initialX}px`;
+                    noBtn.style.top = `${initialY}px`;
                     buttonsContainer.style.flexDirection = 'row';
                 }
             }
             
-            window.addEventListener('resize', adjustButtonLayout);
+            // Initialize and adjust on resize
+            initButtonLayout();
+            window.addEventListener('resize', initButtonLayout);
             
             // Occasionally move the button even without interaction
-            setInterval(() => {
+            let moveInterval = setInterval(() => {
                 // Lower chance on mobile to save battery
-                const chance = isMobile ? 0.05 : 0.08;
-                if (Math.random() < chance && !yesBtn.disabled && !isMoving && window.innerWidth > 480) {
+                const chance = isMobile ? 0.04 : 0.06;
+                if (Math.random() < chance && !isYesClicked && !isMoving && window.innerWidth > 480) {
                     moveNoButton();
                 }
-            }, isMobile ? 5000 : 3500);
+            }, isMobile ? 4000 : 3000);
+            
+            // Clean up interval when yes is clicked
+            yesBtn.addEventListener('click', function() {
+                clearInterval(moveInterval);
+            });
         });
     </script>
 </body>
